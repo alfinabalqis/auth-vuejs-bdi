@@ -1,87 +1,98 @@
 <template>
   <router-view></router-view>
-  <!-- <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a href="/" class="navbar-brand">bezKoder</a>
-      <div class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link to="/home" class="nav-link">
-            <font-awesome-icon icon="home" /> Home
-          </router-link>
-        </li>
-        <li v-if="showAdminBoard" class="nav-item">
-          <router-link to="/admin" class="nav-link">Admin Board</router-link>
-        </li>
-        <li v-if="showModeratorBoard" class="nav-item">
-          <router-link to="/mod" class="nav-link">Moderator Board</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link v-if="currentUser" to="/user" class="nav-link"
-            >User</router-link
-          >
-        </li>
-      </div>
-
-      <div v-if="!currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <router-link to="/register" class="nav-link">
-            <font-awesome-icon icon="user-plus" /> Sign Up
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/login" class="nav-link">
-            <font-awesome-icon icon="sign-in-alt" /> Login
-          </router-link>
-        </li>
-      </div>
-
-      <div v-if="currentUser" class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <router-link to="/profile" class="nav-link">
-            <font-awesome-icon icon="user" />
-            {{ currentUser.username }}
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" @click.prevent="logOut">
-            <font-awesome-icon icon="sign-out-alt" /> LogOut
-          </a>
-        </li>
-      </div>
-    </nav>
-
-    <div class="container">
-      <router-view />
-    </div>
-  </div> -->
 </template>
 
 <script>
+// export default {
+//   computed: {
+//     currentUser() {
+//       return this.$store.state.auth.user;
+//     },
+//     showAdminBoard() {
+//       if (this.currentUser && this.currentUser["roles"]) {
+//         return this.currentUser["roles"].includes("ROLE_ADMIN");
+//       }
+
+//       return false;
+//     },
+//     showModeratorBoard() {
+//       if (this.currentUser && this.currentUser["roles"]) {
+//         return this.currentUser["roles"].includes("ROLE_MODERATOR");
+//       }
+
+//       return false;
+//     },
+//   },
+//   methods: {
+//     logOut() {
+//       this.$store.dispatch("auth/logout");
+//       this.$router.push("/login");
+//     },
+//   },
+// };
+
 export default {
-  computed: {
-    currentUser() {
-      return this.$store.state.auth.user;
-    },
-    showAdminBoard() {
-      if (this.currentUser && this.currentUser["roles"]) {
-        return this.currentUser["roles"].includes("ROLE_ADMIN");
-      }
-
-      return false;
-    },
-    showModeratorBoard() {
-      if (this.currentUser && this.currentUser["roles"]) {
-        return this.currentUser["roles"].includes("ROLE_MODERATOR");
-      }
-
-      return false;
-    },
-  },
-  methods: {
-    logOut() {
-      this.$store.dispatch("auth/logout");
-      this.$router.push("/login");
-    },
-  },
-};
+  name: 'App'
+}
 </script>
+
+<!-- <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 100px;
+}
+
+.register input,
+.login input {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  display: block;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid skyblue;
+}
+
+.register button,
+.login button {
+  width: 320px;
+  height: 40px;
+  border: 1px solid skyblue;
+  background: skyblue;
+  color: white;
+  cursor: pointer;
+}
+
+nav{
+  background: #333;
+  overflow: hidden;
+}
+
+nav a{
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+nav a:hover{
+  background: #ddd;
+  color: #333;  
+}
+</style> -->

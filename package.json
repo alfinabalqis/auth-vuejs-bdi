@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite --port 8000",
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
@@ -17,21 +16,13 @@
     "bootstrap": "^4.6.2",
     "formik": "^2.4.3",
     "jquery": "^3.7.1",
-=======
-    "axios": "^1.5.0",
->>>>>>> bcb993c62c68a6c195f282a156aae02c25c7dd53
     "pinia": "^2.1.6",
     "popper.js": "^1.16.1",
     "vee-validate": "^4.11.3",
     "vue": "^3.3.4",
-<<<<<<< HEAD
     "vue-router": "^4.2.4",
     "vuex": "^4.0.2",
     "yup": "^1.2.0"
-=======
-    "vue-axios": "^3.5.2",
-    "vue-router": "^4.2.4"
->>>>>>> bcb993c62c68a6c195f282a156aae02c25c7dd53
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.1",
